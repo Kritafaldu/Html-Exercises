@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-tokens/tokens.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>A demo of tokenized autocomplete</h1>
+    </div>
+    <form class="form">
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-4 form-group'>
+                <label for="name">Type the text</label>
+                <input id="tokens-example" class="form-control" type="text" required>
+            </div>
+     </div>
+    </form>        
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+    <script src="js/jquery-tokens/tokens.js"></script>
+<script>
+      (function(){
+        $('#tokens-example').tokens({
+          source : [
+            'United States', 'United Kingdom', 'Canada', 'Mexico',
+            'Germany', 'France', 'Russia', 'Spain',
+            'Turkey', 'India', 'Pakistan', 'Bangladesh',
+            'Sri Lanka', 'Nepal', 'Brazil', 'Oman',
+            'Saudi Arabia'
+          ],
+          initValue : [ 'United States' ]
+        });
+      })();
+    </script>
+</body>
+</html>
+
